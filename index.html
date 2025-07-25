@@ -312,7 +312,7 @@
                     <input 
                         type="text" 
                         id="trackingInput"
-                        placeholder="Enter tracking number (e.g., SS123456789US)"
+                        placeholder="Enter tracking number"
                         class="flex-1 px-6 py-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-lg"
                     >
                     <button onclick="trackPackage()" class="bg-primary text-white px-8 py-4 rounded-lg hover:bg-blue-800 transition-colors text-lg font-semibold">
@@ -381,7 +381,7 @@
                     <div class="flex items-center justify-between">
                         <div>
                             <p class="text-sm text-gray-600">Tracking Number</p>
-                            <p class="font-semibold text-gray-800" id="trackingNumber">SS123456789US</p>
+                            <p class="font-semibold text-gray-800" id="trackingNumber">TRK-5849217</p>
                         </div>
                         <div class="text-right">
                             <p class="text-sm text-gray-600">Status</p>
@@ -734,7 +734,7 @@
         const trackingId = trackingInput.value.trim();
         
         // Valid tracking ID for demo
-        const validTrackingId = 'SS123456789US';
+        const validTrackingId = 'TRK-5849217';
         
         if (trackingId === '') {
             alert('Please enter a tracking number');
@@ -747,7 +747,7 @@
             document.getElementById('trackingDialog').classList.remove('hidden');
             document.body.style.overflow = 'hidden'; // Prevent background scrolling
         } else {
-            alert('Error: Invalid tracking number. Please check your tracking ID and try again.\n\nFor demo purposes, try: SS123456789US');
+            alert('Error: Invalid tracking number. Please check your tracking ID and try again.');
         }
     }
 
